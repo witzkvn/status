@@ -12,9 +12,9 @@
     
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      background: #f8fafc;
       min-height: 100vh;
-      color: #f8fafc;
+      color: #1e293b;
     }
     
     .container {
@@ -29,128 +29,135 @@
     }
     
     .header h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      margin-bottom: 10px;
-      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      margin-bottom: 8px;
+      color: #0f172a;
     }
     
     .header .subtitle {
-      color: #94a3b8;
+      color: #64748b;
+      font-size: 1rem;
+    }
+    
+    .overall-status {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    
+    .overall-status h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
     
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
       margin-bottom: 40px;
     }
     
     .stat-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 24px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
       text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     
     .stat-value {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
     
-    .stat-value.up { color: #10b981; }
-    .stat-value.down { color: #ef4444; }
-    .stat-value.total { color: #60a5fa; }
-    .stat-value.percent { color: #a78bfa; }
+    .stat-value.up { color: #059669; }
+    .stat-value.down { color: #dc2626; }
+    .stat-value.total { color: #2563eb; }
+    .stat-value.percent { color: #7c3aed; }
     
     .stat-label {
-      color: #94a3b8;
-      font-size: 0.875rem;
+      color: #64748b;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .overall-status {
-      background: linear-gradient(135deg, #065f46 0%, #047857 100%);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
-    }
-    
-    .overall-status h2 {
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
+      letter-spacing: 0.5px;
+      font-weight: 500;
     }
     
     .sites-section h3 {
-      font-size: 1.25rem;
-      margin-bottom: 20px;
-      color: #e2e8f0;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: #334155;
+      font-weight: 600;
     }
     
     .sites-grid {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
     }
     
     .site-card {
       background: white;
-      border-radius: 12px;
-      padding: 20px;
-      color: #1f2937;
-      border-left: 4px solid;
-      border: 1px solid;
+      border-radius: 10px;
+      padding: 16px 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
     
     .site-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       flex-wrap: wrap;
       gap: 10px;
     }
     
     .site-name {
       font-weight: 600;
-      font-size: 1.1rem;
-      color: #111827;
+      font-size: 1rem;
+      color: #0f172a;
     }
     
     .status-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
+      gap: 5px;
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: white;
     }
     
     .site-url {
-      color: #6b7280;
-      font-size: 0.875rem;
-      word-break: break-all;
-      margin-bottom: 8px;
+      color: #2563eb;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
+    }
+    
+    .site-url:hover {
+      text-decoration: underline;
     }
     
     .error-details {
       background: #fef2f2;
       border: 1px solid #fecaca;
-      border-radius: 8px;
-      padding: 10px;
+      border-radius: 6px;
+      padding: 8px 12px;
       margin: 10px 0;
       display: flex;
       align-items: center;
@@ -159,55 +166,61 @@
     }
     
     .error-code {
-      background: #1f2937;
-      color: #f9fafb;
-      padding: 4px 10px;
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 3px 8px;
       border-radius: 4px;
       font-family: monospace;
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       font-weight: 600;
     }
     
     .error-message {
-      color: #dc2626;
-      font-size: 0.875rem;
+      color: #b91c1c;
+      font-size: 0.85rem;
     }
     
     .site-time {
-      color: #9ca3af;
+      color: #94a3b8;
       font-size: 0.75rem;
-      margin-top: 8px;
+      margin-top: 6px;
     }
     
     .footer {
       text-align: center;
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid #e2e8f0;
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+    
+    .footer .update-time {
       color: #64748b;
-      font-size: 0.875rem;
+      margin-top: 6px;
     }
     
     .pulse {
       animation: pulse 2s infinite;
-      color: #10b981;
+      color: #059669;
     }
     
     @keyframes pulse {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+      50% { opacity: 0.4; }
     }
     
     @media (max-width: 600px) {
-      .header h1 { font-size: 1.75rem; }
-      .stat-value { font-size: 2rem; }
+      .header h1 { font-size: 1.6rem; }
+      .stat-value { font-size: 1.6rem; }
+      .container { padding: 24px 16px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <h1>🖥️ Status Page</h1>
+      <h1>📊 Status Page</h1>
       <p class="subtitle">Surveillance en temps réel des services KW Digital</p>
     </header>
     
@@ -241,16 +254,16 @@
       <h3>📋 Détail des services</h3>
       <div class="sites-grid">
         
-    <div class="site-card" style="border-left-color: #10b981; background: #ecfdf5; border-color: #a7f3d0;">
+    <div class="site-card" style="border-left: 4px solid #059669; background: #ecfdf5;">
       <div class="site-header">
         <span class="site-name">KW Digital</span>
-        <span class="status-badge" style="background: #10b981;">
+        <span class="status-badge" style="background: #059669;">
           ✓ Opérationnel
         </span>
       </div>
-      <div class="site-url">https://kw-digital.fr/</div>
+      <a href="https://kw-digital.fr/" class="site-url" target="_blank">https://kw-digital.fr/</a>
       
-      <div class="site-time">Dernière vérification : 31/01/2026 20:50:52</div>
+      <div class="site-time">Dernière vérification : 31/01/2026 20:58:03</div>
     </div>
   
       </div>
@@ -258,11 +271,11 @@
     
     <footer class="footer">
       <div>🤖 Powered by n8n Uptime Monitor</div>
-      <div style="margin-top: 8px;">
-        Dernière mise à jour : samedi 31 janvier 2026 à 20:50:52
+      <div class="update-time">
+        Dernière mise à jour : samedi 31 janvier 2026 à 20:58:03
         <span class="pulse">●</span>
       </div>
-      <div style="margin-top: 8px;">Rafraîchissement automatique toutes les 2 minutes</div>
+      <div style="margin-top: 6px; font-size: 0.8rem;">Rafraîchissement automatique toutes les 2 minutes</div>
     </footer>
   </div>
 </body>
